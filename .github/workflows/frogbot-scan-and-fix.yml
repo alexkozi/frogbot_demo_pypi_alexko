@@ -20,7 +20,12 @@ jobs:
         with:
           ref: ${{ matrix.branch }}
 
-      # Install prerequisites
+      # Install prerequisite
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
