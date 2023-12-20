@@ -26,11 +26,6 @@ jobs:
         with:
           node-version: "16.x"
           
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-          cache: 'pip'
       - uses: jfrog/frogbot@v2
         env:
           # [Mandatory]
