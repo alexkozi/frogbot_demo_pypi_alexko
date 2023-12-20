@@ -17,6 +17,11 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
 
       # Install prerequisites
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16.x"
+          
+      # Install prerequisites
       - uses: actions/setup-python@v3
         with:
           python-version: "3.x"
